@@ -1,9 +1,8 @@
 FROM jupyter/singleuser
 
 USER jovyan
-RUN conda install -c ioos --quiet --yes \
-    'folium=0.2.1' \
-    && conda clean -tipsy
+
+RUN pip install -e git://github.com/python-visualization/folium.git@master#egg=folium
 
 USER root
 RUN apt-get update && apt-get install -y \
