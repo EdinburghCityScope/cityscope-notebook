@@ -2,7 +2,7 @@ FROM jupyter/singleuser
 
 USER jovyan
 
-RUN pip install -e git://github.com/python-visualization/folium.git@master#egg=folium
+RUN pip install -e git://github.com/python-visualization/folium.git@8fa74b90d69a0caff125c4de45c977b6d8b73ca4#egg=folium
 
 USER root
 RUN apt-get update && apt-get install -y \
